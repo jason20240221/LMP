@@ -1,1 +1,10 @@
-hello jason
+
+<view class="card">
+  <image class="bg" src="/img/蓝色.png" mode="widthFix"/>
+  <image class="logo" src="/img/李梦玲-removebg.png" mode="widthFix"/>
+  <view class="info">
+    <view class="name">李梦玲</view>
+    <view class="introduce">名校10年金牌讲师</view>
+    <view>limengling@163.com</view>
+  </view>
+</view>
