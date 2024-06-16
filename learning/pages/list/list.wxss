@@ -1,0 +1,20 @@
+/* pages/list/list.wxss */
+.container1 {
+  display: flex; /* 子元素都会成为 flex 项目，并尝试按照容器的大小和设定的规则自动调整大小和位置*/
+  justify-content: space-around; /*沿着主轴均匀分布子元素*/
+}
+.container1 view {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.container1 view:nth-child(1) {
+  background: lightgreen;
+}
+.container1 view:nth-child(2) {
+  background: lightblue;
+}
+.container1 view:nth-child(3) {
+  background: lightpink;
+}
