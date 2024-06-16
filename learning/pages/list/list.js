@@ -5,7 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      currentSwiperIndex: 0,
+  },
+  // swiper-item 的位置发生改变时触发
+  handleTransition: function(event) {
+    const detail = event.detail;
+    // console.log('Transition details:', detail);
+    // Access dx and dy
+    const dx = detail.dx;
+    const dy = detail.dy;
+    // Perform any action based on the transition details
+    // if (Math.abs(dx) > 50) {
+    //   console.log('Significant horizontal movement detected');
+    //   // Do something when there is significant horizontal movement
+    // }
+    // if (Math.abs(dy) > 149) {
+    //   console.log('Significant vertical movement detected');
+    //   // Do something when there is significant vertical movement
+    // }
+  },
+  // 当swiper的当前页发生改变时触发
+  handleSwiperChange: function(e) {
+    // e.detail 包含了当前轮播页的信息
+    const currentSwiperIndex = e.detail.current;
+    console.log('当前轮播页索引：', currentSwiperIndex);
+    
+    // 更新数据模型，以便在其他地方使用这个值
+    this.setData({
+      currentSwiperIndex: e.detail.current
+    });
+  },
+  /* 点击触发轮播图片跳转 */
+  changeToPage: function(e) {
+    var pageIndex = e.currentTarget.dataset.pageIndex;
+    this.setData({
+      currentSwiperIndex: pageIndex
+    });
   },
 
   /**

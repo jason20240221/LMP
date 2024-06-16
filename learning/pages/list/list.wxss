@@ -1,22 +1,18 @@
 /* pages/list/list.wxss */
-.container1 {
-  border: 1px solid red;
-  height: 120px; /*纵向滚动需要强制性设置高度*/
-  width: 100px; /*横向滚动需要强制性设置宽度*/
-
+.swiper-container {
+  height: 150px; 
 }
-.container1 view {
-  width: 100px;
-  height: 100px;
+.item {
+  height: 100%;
   text-align: center;
-  line-height: 100px;
+  line-height: 150px;
 }
-.container1 view:nth-child(1) {
+swiper-item:nth-child(1) .item {
   background: lightgreen;
 }
-.container1 view:nth-child(2) {
+swiper-item:nth-child(2) .item {
   background: lightblue;
 }
-.container1 view:nth-child(3) {
-  background: lightpink;
+swiper-item:nth-child(3) .item {
+  background: lightcoral;
 }
